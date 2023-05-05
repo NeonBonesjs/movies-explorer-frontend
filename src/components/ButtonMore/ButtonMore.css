@@ -1,0 +1,12 @@
+.movies-card__button {
+    width: 100%;
+    border: none;
+    background-color: #F4F4F4;
+    height: 36px;
+    margin: 0 0 80px 0;
+    border-radius: 6px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+}
