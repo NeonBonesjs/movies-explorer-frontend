@@ -12,24 +12,24 @@ export default function Login() {
         children={
             <>
             <div className='form-page__input-box'>
-                       <span className='regiser__input-title'>
+                       <span className='form-page__input-title'>
                            Имя
                        </span>
-                       <input className='regiser__input'>
+                       <input className='form-page__input'>
 
                        </input>
-                       <span className='regiser__input-error'>
+                       <span className='form-page__input-error'>
 
                        </span>
                  </div>
                    <div className='form-page__input-box'>
-                       <span className='regiser__input-title'>
+                       <span className='form-page__input-title'>
                            E-mail
                        </span>
-                       <input className='regiser__input'>
+                       <input className='form-page__input'>
 
                        </input>
-                       <span className='regiser__input-error'>
+                       <span className='form-page__input-error'>
 
                        </span>
                    </div>

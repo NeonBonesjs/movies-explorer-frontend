@@ -76,6 +76,10 @@
     border-right: #E8E8E8 1px solid;
     height: 40px;
     cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.search-form__submit:hover{
+    transform: scale(1.1);
 }
 @media (max-width: 768px) {
     .search-form__submit{

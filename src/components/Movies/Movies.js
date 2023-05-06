@@ -8,9 +8,11 @@ export default function Movies() {
     return(
         <>
         <Header/>
-        <SearchForm/>
-        <MoviesCardList/>
-        <ButtonMore />
+        <main>
+            <SearchForm/>
+            <MoviesCardList/>
+            <ButtonMore />
+        </main>
         <Footer/>
         </>
     )

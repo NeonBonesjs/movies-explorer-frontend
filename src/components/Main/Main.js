@@ -8,10 +8,12 @@ export default function Main(props) {
     return(
         <>
         <Header/>
-        <Promo/>
-        <AboutProject/>
-        <Techs/>
-        <AboutMe/>
+        <main>
+            <Promo/>
+            <AboutProject/>
+            <Techs/>
+            <AboutMe/>
+        </main>
         <Footer/>
         </>
     )

@@ -7,8 +7,8 @@ import SearchForm from '../SearchForm/SearchForm';
 export default function SavedMovies() {
     return(
         <>
+        <Header />
         <main className='saved-movies'>
-            <Header />
             <SearchForm />
             <MoviesCardList />
         </main>

@@ -47,7 +47,7 @@
 .form-page__input-box{
     width: 100%;
 }
-.regiser__input-title {
+.form-page__input-title {
     display: block;
     font-style: normal;
     font-weight: 400;
@@ -57,7 +57,7 @@
     color: #A0A0A0;
     margin: 0 0 10px 0;
 }
-.regiser__input {
+.form-page__input {
     border: none;
     background: none;
     background-color: #F4F4F4;
@@ -66,7 +66,7 @@
     width: 100%;
     border-radius: 8px;
 }
-.regiser__input-error {
+.form-page__input-error {
     display: none;
     font-style: normal;
     font-weight: 400;
