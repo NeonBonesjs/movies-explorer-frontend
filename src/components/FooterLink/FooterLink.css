@@ -1,0 +1,19 @@
+.footer__link{
+    text-decoration: none;
+    color: black;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    transition: opacity 0.4s ease-in-out;
+    cursor: pointer;
+}
+.footer__link:hover{
+    opacity: 0.6;
+}
+@media (max-width: 490px) {
+    .footer__link{
+        font-size: 12px;
+        line-height: 14px;
+    }
+}

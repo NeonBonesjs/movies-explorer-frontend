@@ -1,0 +1,101 @@
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 74px);
+    /* padding: 74px 0 70px 0; */
+    box-sizing: border-box;
+}
+@media (max-width: 490px) {
+    .profile{
+        justify-content: flex-start;
+        padding-top: 70px;
+    }
+}
+.profile__welcome {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    margin: 0 0 123px 0;
+}
+@media (max-width: 490px) {
+    .profile__welcome{
+        margin: 0 0 80px 0;
+    }
+}
+.profile__name-email {
+    width: 410px;
+    margin: 0 0 220px 0;
+}
+@media (max-width: 490px) {
+    .profile__name-email{
+        margin: 0;
+        width: calc(100% - 60px);
+        flex-grow: 1;
+    }
+}
+.profile__name-string {
+    display: flex;
+    padding: 0 0 16px 0;
+    border-bottom: 1px solid #E8E8E8;
+    justify-content: space-between;
+}
+.profile__name-span {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 13px;
+}
+.profile__name-input {
+    border: none;
+    background: none;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 13px;
+    text-align: right;
+}
+.profile__email-string {
+    display: flex;
+    justify-content: space-between;
+    padding: 17px 0 0 0;
+}
+.profile__email-span{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 13px;
+}
+.profile__email-input{
+    border: none;
+    background: none;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 13px;
+    text-align: right;
+}
+.profile__change {
+    padding: 0;
+    border: none;
+    background: none;
+    margin: 0 0 16px 0;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+}
+.profile__exit {
+    padding: 0;
+    border: none;
+    background: none;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    color: #EE3465;
+    margin: 0 0 40px 0;
+}

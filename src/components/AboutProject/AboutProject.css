@@ -1,0 +1,110 @@
+.about-project{
+    padding-top: 110px;
+}
+@media (max-width: 1024px) {
+    .about-project{
+        padding-top: 90px;
+    }
+}
+.about-project__cards{
+    display: flex;
+    gap: 40px;
+}
+@media (max-width: 1024px) {
+    .about-project__cards{
+        gap: 30px;
+    }
+}
+@media (max-width: 490px) {
+    .about-project__cards{
+        gap: 56px;
+        flex-direction: column;
+    }
+}
+.about-project__title{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 27px;
+    letter-spacing: -0.04em;
+    margin: 0 0 70px 0;
+    text-align: left;
+    padding-bottom: 23px;
+    border-bottom: 1px black solid;
+}
+
+.about-project__card{
+    text-align: left;
+}
+.about-project__subtitle{
+    margin-bottom: 26px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.04em;
+}
+@media (max-width: 1024px) {
+    .about-project__subtitle{
+        margin-bottom: 22px;
+    }
+}
+@media (max-width: 490px) {
+    .about-project__subtitle{
+        margin-bottom: 16px;
+    }
+}
+.about-project__text{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+}
+@media (max-width: 1024px) {
+    .about-project__text{
+        font-size: 12px;
+        line-height: 18px;
+    }
+}
+.about-project__timeline{
+    margin: 110px 0 ;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+@media (max-width: 1024px) {
+    .about-project__timeline{
+        margin: 93px 0 90px 0;
+    }
+}
+@media (max-width: 490px) {
+    .about-project__timeline{
+        margin: 60px 0 70px;
+        grid-template-columns: 100px auto;
+    }
+}
+.about-project__box-title{
+    background-color: #3456F3;
+    color: white;
+    padding: 9px 0;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+}
+.about-project__box-title:last-of-type{
+    background-color:#F2F2F2;
+    color: black;
+}
+.about-project__box-subtitle{
+    color: #A0A0A0;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    margin: 14px 0 0 0;
+}
+@media (max-width: 490px) {
+    .about-project__box-subtitle{
+        margin: 10px 0 0 0;
+    }
+}
