@@ -28,7 +28,9 @@
 }
 .profile__name-email {
     width: 410px;
-    margin: 0 0 220px 0;
+    margin: 0 0 0 0;
+    display: flex;
+    flex-direction: column;
 }
 @media (max-width: 490px) {
     .profile__name-email{
@@ -43,13 +45,17 @@
     border-bottom: 1px solid #E8E8E8;
     justify-content: space-between;
 }
+.profile__name-string_on-change {
+    flex-direction: column;
+    border: none;
+}
 .profile__name-span {
     font-style: normal;
     font-weight: 400;
     font-size: 11px;
     line-height: 13px;
 }
-.profile__name-input {
+.profile__input {
     border: none;
     background: none;
     font-style: normal;
@@ -58,10 +64,25 @@
     line-height: 13px;
     text-align: right;
 }
+.profile__input_on-change{
+    text-align: center;
+    margin-top: 10px;
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 4px;
+    background-color:  #E8E8E8;
+}
 .profile__email-string {
     display: flex;
     justify-content: space-between;
     padding: 17px 0 0 0;
+    flex-grow: 1;
+    align-items: flex-start;
+}
+.profile__email-string_on-change {
+    flex-direction: column;
+    align-items: normal;
+    justify-content: normal;
 }
 .profile__email-span{
     font-style: normal;
@@ -69,24 +90,24 @@
     font-size: 11px;
     line-height: 13px;
 }
-.profile__email-input{
-    border: none;
-    background: none;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 11px;
-    line-height: 13px;
-    text-align: right;
-}
+
 .profile__change {
+    display: none;
     padding: 0;
     border: none;
     background: none;
-    margin: 0 0 16px 0;
+    margin: 236px auto 16px auto;
     font-style: normal;
     font-weight: 400;
     font-size: 13px;
     line-height: 16px;
+}
+
+.profile__change_visible{
+    display: block;
+}
+.profile__change_unactive{
+    color:#E8E8E8;
 }
 .profile__exit {
     padding: 0;
@@ -98,4 +119,16 @@
     line-height: 16px;
     color: #EE3465;
     margin: 0 0 40px 0;
+}
+.profile__error{
+    display: none;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 13px;
+    color: #EE3465;
+    margin-top: 5px;
+}
+.profile__error_on-change{
+    display: block;
 }

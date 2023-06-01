@@ -1,4 +1,5 @@
 .movies-cards__button {
+    display: none;
     width: 100%;
     border: none;
     background-color: #F4F4F4;
@@ -9,4 +10,8 @@
     font-weight: 500;
     font-size: 12px;
     line-height: 15px;
+    cursor: pointer;
+}
+.movies-cards__button_visible{
+    display: block;
 }
