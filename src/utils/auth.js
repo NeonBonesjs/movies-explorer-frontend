@@ -1,4 +1,4 @@
-export const BASE_URL = "http://api.movies-neonbonesjs.nomoredomains.work";
+export const BASE_URL = "https://api.movies-neonbonesjs.nomoredomains.work";
 
 const checkServerResponse = (res) => {
   if (res.ok) {

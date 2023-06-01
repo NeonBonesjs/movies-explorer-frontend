@@ -56,7 +56,7 @@ class Api {
   }
   
   export const mainApi = new Api({
-    baseUrl: "http://api.movies-neonbonesjs.nomoredomains.work",
+    baseUrl: "https://api.movies-neonbonesjs.nomoredomains.work",
     headers: {
       "Content-Type": "application/json",
     },
