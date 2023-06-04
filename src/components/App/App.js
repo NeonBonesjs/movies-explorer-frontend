@@ -27,6 +27,59 @@ function App() {
   const navigate = useNavigate();
   const location = useLocation();
 
+
+
+  useEffect(() => {
+    if (token) {
+      setLoggedIn(true);
+      if (location.pathname === "/signup" || location.pathname === "/signin") {
+        navigate("/movies");
+      } else {
+        navigate(location.pathname);
+      }
+    }
+  }, [token, loggedIn, navigate, location.pathname]);
+
+  useEffect(() => {
+    if(loggedIn) {
+      auth.getUserInfo(token)
+        .then((res) => {
+          setCurrentUser(res);
+        })
+        .catch((e) => {
+          console.log(e);
+          setLoggedIn(false);
+        })
+    }
+    console.log('z nen')
+  }, [loggedIn, setCurrentUser, token]);
+
+
+
+  useEffect(() => {
+    if(!token) {
+      setLoggedIn(false);
+      setCurrentUser({
+        name: '',
+        email: '',
+      })
+    }
+  }, [token]);
+
+  useEffect(() => {
+    if(loggedIn) {
+      mainApi.getSavedMovies(token)
+        .then((res) => {
+          const ownSavedFilms = res.movies.filter((film) => 
+            film.owner === currentUser._id
+          )
+          setSavedMovies(ownSavedFilms)
+        })
+        .catch(e => console.log(e))
+    }
+  }, [loggedIn, currentUser, token, setSavedMovies])
+
+
   const handleRegisterUser = (email, pass, name) => {
     auth.register(name, email, pass)
       .then((res) => {
@@ -64,49 +117,6 @@ function App() {
         setPopupText(e.message)
       })
   }
-
-  useEffect(() => {
-    if(token) {
-      auth.getUserInfo(token)
-        .then((res) => {
-          setCurrentUser(res);
-          setLoggedIn(true);
-        })
-        .catch((e) => {
-          console.log(e);
-          setLoggedIn(false);
-        })
-    }
-  }, [token]);
-
-  useEffect(() => {
-    if(loggedIn && (location.pathname === '/signup' || location.pathname === '/signin')) {
-      navigate('/movies')
-    } 
-  }, [location, loggedIn, navigate])
-
-  useEffect(() => {
-    if(!token) {
-      setLoggedIn(false);
-      setCurrentUser({
-        name: '',
-        email: '',
-      })
-    }
-  }, [token]);
-
-  useEffect(() => {
-    if(loggedIn) {
-      mainApi.getSavedMovies(token)
-        .then((res) => {
-          const ownSavedFilms = res.movies.filter((film) => 
-            film.owner === currentUser._id
-          )
-          setSavedMovies(ownSavedFilms)
-        })
-        .catch(e => console.log(e))
-    }
-  }, [loggedIn, currentUser, token, setSavedMovies])
 
   return (
     <AppContext.Provider value={{currentUser, loggedIn, setCurrentUser}}>
