@@ -21,7 +21,8 @@ function App() {
     name: '',
     email: '',
   });
-  const [error, setError] = useState('');
+  const [popupText, setPopupText] = useState('');
+  const [sucsess, setSucsess] = useState(false);
   const token = localStorage.getItem('token');
   const navigate = useNavigate();
   const location = useLocation();
@@ -33,7 +34,7 @@ function App() {
           handleLoginUser(email, pass)
         }
       })
-      .catch(e => setError(e.message))
+      .catch(e => setPopupText(e.message))
   }
 
   const handleLoginUser = (email, pass) => {
@@ -45,7 +46,7 @@ function App() {
         }
       })
     
-      .catch(e => setError(e.message))
+      .catch(e => setPopupText(e.message))
   }
 
   const handleChangeUserInfo = (name, email) => {
@@ -55,10 +56,12 @@ function App() {
           name: res.name,
           email: res.email
         })
+        setSucsess(true);
+        setPopupText('Данные успешно изменены')
       })
       .catch(e => {
         setCurrentUser(currentUser)
-        setError(e.message)
+        setPopupText(e.message)
       })
   }
 
@@ -116,7 +119,7 @@ function App() {
 
         <Route path='/saved-movies' element={<ProtectedRoute component={SavedMovies} loggedIn={loggedIn} savedMovies={savedMovies} setSavedMovies={setSavedMovies} />} />
 
-        <Route path='/profile' element={<ProtectedRoute component={Profile} loggedIn={loggedIn} submitHandler={handleChangeUserInfo} popupError={error}/>} />
+        <Route path='/profile' element={<ProtectedRoute component={Profile} loggedIn={loggedIn} submitHandler={handleChangeUserInfo} popupText={popupText} />} />
 
         <Route path='/signup' element={<Register submitHandler={handleRegisterUser}/>}/>
 
@@ -124,7 +127,7 @@ function App() {
 
         <Route path='*' element={<NotFound />} />
       </Routes>
-      <Popup isActive={true} errorText={error} setErrorText={setError}/>
+      <Popup popupText={popupText} setPopupText={setPopupText} sucsess={sucsess} setSucsess={setSucsess}/>
     </div>
     </AppContext.Provider>
   );

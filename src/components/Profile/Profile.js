@@ -9,7 +9,7 @@ import { countInputs } from '../../utils/countInput';
 
 export default function Profile({
     submitHandler,
-    popupError
+    popupText
 }) {
     const amountInput = countInputs('.profile__input')
     const [onChange, setOnChange] = useState(false);
@@ -47,13 +47,13 @@ export default function Profile({
       }, [currentUser.name, currentUser.email, setValues]);
 
     useEffect(() => {
-        if(popupError) {
+        if(popupText) {
             setValues({
                 name: currentUser.name,
                 email: currentUser.email,
               });
         }
-    }, [popupError, currentUser.name, currentUser.email, setValues])
+    }, [popupText, currentUser.name, currentUser.email, setValues])
     return(
         <>
         <Header/>
