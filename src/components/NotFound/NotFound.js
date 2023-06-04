@@ -1,6 +1,12 @@
 import './NotFound.css';
+import { useNavigate } from 'react-router-dom'
 
 export default function NotFound() {
+    const navigate = useNavigate()
+    const goBack = () => {
+        navigate(-1)
+    }
+
     return(
         <main className='notfound'>
             <div className='notfound__block'>
@@ -12,7 +18,7 @@ export default function NotFound() {
                 </p>
                
             </div>
-            <a href='#' className='notfound__link'>
+            <a className='notfound__link' onClick={goBack}>
                 Назад
             </a>
             

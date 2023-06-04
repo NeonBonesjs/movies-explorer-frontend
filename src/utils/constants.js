@@ -32,74 +32,22 @@ export const Stack = [
       url: "https://practicum.yandex.ru/",
     },
     {
-      id: 1,
+      id: 2,
       title: "Github",
       url: "https://github.com/NeonBonesjs",
     }
 
   ]
 
-  export const hardFilms = [
-    {
-      name: 'film',
-      duration: '1 ч 22 мин',
-      image: 'https://krot.info/uploads/posts/2022-03/1646298211_4-krot-info-p-smeshnie-siba-inu-smeshnie-foto-5.jpg'
-    },
-    {
-      name: 'film2',
-      duration : '2ч 12мин',
-      image: 'https://krot.info/uploads/posts/2022-03/1646298174_3-krot-info-p-smeshnie-siba-inu-smeshnie-foto-3.jpg'
-    },
-    {
-      name: 'film',
-      duration: '1 ч 22 мин',
-      image: 'https://krot.info/uploads/posts/2022-03/1646298211_4-krot-info-p-smeshnie-siba-inu-smeshnie-foto-5.jpg'
-    },
-    {
-      name: 'film2',
-      duration : '2ч 12мин',
-      image: 'https://krot.info/uploads/posts/2022-03/1646298174_3-krot-info-p-smeshnie-siba-inu-smeshnie-foto-3.jpg'
-    },
-    {
-      name: 'film',
-      duration: '1 ч 22 мин',
-      image: 'https://krot.info/uploads/posts/2022-03/1646298211_4-krot-info-p-smeshnie-siba-inu-smeshnie-foto-5.jpg'
-    },
-    {
-      name: 'film2',
-      duration : '2ч 12мин',
-      image: 'https://krot.info/uploads/posts/2022-03/1646298174_3-krot-info-p-smeshnie-siba-inu-smeshnie-foto-3.jpg'
-    },
-    {
-      name: 'film',
-      duration: '1 ч 22 мин',
-      image: 'https://krot.info/uploads/posts/2022-03/1646298211_4-krot-info-p-smeshnie-siba-inu-smeshnie-foto-5.jpg'
-    },
-    {
-      name: 'film2',
-      duration : '2ч 12мин',
-      image: 'https://krot.info/uploads/posts/2022-03/1646298174_3-krot-info-p-smeshnie-siba-inu-smeshnie-foto-3.jpg'
-    },
-    {
-      name: 'film',
-      duration: '1 ч 22 мин',
-      image: 'https://krot.info/uploads/posts/2022-03/1646298211_4-krot-info-p-smeshnie-siba-inu-smeshnie-foto-5.jpg'
-    },
-    {
-      name: 'film2',
-      duration : '2ч 12мин',
-      image: 'https://krot.info/uploads/posts/2022-03/1646298174_3-krot-info-p-smeshnie-siba-inu-smeshnie-foto-3.jpg'
-    },
-    {
-      name: 'film',
-      duration: '1 ч 22 мин',
-      image: 'https://krot.info/uploads/posts/2022-03/1646298211_4-krot-info-p-smeshnie-siba-inu-smeshnie-foto-5.jpg'
-    },
-    {
-      name: 'film2',
-      duration : '2ч 12мин',
-      image: 'https://krot.info/uploads/posts/2022-03/1646298174_3-krot-info-p-smeshnie-siba-inu-smeshnie-foto-3.jpg'
-    },
-    
-  ]
-  export const hardFilms1 = []
+  export const hardFilms1 = [];
+  export const DEFAULT_ERROR_MESSAGE = "Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз";
+  export const MAX_DURATION_SHORT_FILM = 40;
+  export const MOBILE_WIDTH = 480;
+  export const LAPTOP_WIDTH = 1280;
+  export const LARGE_PAGE_CARDS_COUNT = 12;
+  export const LARGE_NEXT_PAGE_CARDS_COUNT = 3;
+  export const MEDIUM_PAGE_CARDS_COUNT = 8;
+  export const MEDIUM_NEXT_PAGE_CARDS_COUNT = 2;
+  export const SMALL_PAGE_CARDS_COUNT = 5;
+  export const SMALL_NEXT_PAGE_CARDS_COUNT = 5;
+  export const ADDING_PAGE_AMOUNT = 1;

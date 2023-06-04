@@ -2,6 +2,8 @@
     background-color: #FFFFFF;
     /* height: 281px; */
     border-radius: 6px;
+    display: flex;
+    flex-direction: column;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.08);
 }
 @media (max-width: 768px) {
@@ -21,11 +23,14 @@
 }
 
 .movies-card__title {
+    text-decoration: none;
+    color: black;
     font-style: normal;
     font-weight: 500;
     font-size: 13px;
     line-height: 16px;
     margin: 0;
+    cursor: pointer;
 }
 @media (max-width:490px) {
     .movies-card__title{
@@ -38,6 +43,7 @@
     background-position: center;
     width: 14px;
     background-repeat: no-repeat;
+    cursor: pointer;
 }
 .movies-card__like_active {
     background-image: url(../../images/like-active.svg);
@@ -72,6 +78,7 @@
     width: 100%;
     object-fit: cover;
     border-radius: 6px 6px 0 0;
+    cursor: pointer;
 }
 @media (max-width:768px) {
     .movies-card__image{

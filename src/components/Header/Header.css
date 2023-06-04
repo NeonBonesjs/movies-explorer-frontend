@@ -105,13 +105,13 @@
 }
 
 .header__log{
-    display: none;
+    display: flex;
     align-items: center;
     width: 100%;
     justify-content: space-between;
 }
-.header__log_visible{
-    display: flex;
+.header__log_hidden{
+    display: none;
 }
 @media (max-width: 768px) {
     .header__log_visible{
@@ -200,11 +200,11 @@
     }
   }
 
-.popup{
+.header__popup{
     display: none;
 }
   @media (max-width:768px) {
-    .popup{
+    .header__popup{
         display: block;
         position: fixed;
         visibility: hidden;
@@ -215,7 +215,7 @@
         background-color: rgba(0, 0, 0, 0.5);
         opacity: 0;
     }
-    .popup.active{
+    .header__popup.active{
         opacity: 1;
         visibility: visible;
     }
