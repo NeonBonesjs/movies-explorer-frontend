@@ -46,11 +46,11 @@ export default function MoviesCard({
 
     return(
         <div className="movies-card">
-            <a href={movie.trailerLink}>
+            <a href={movie.trailerLink} target='_blank' rel='noreferrer'>
             <img src={isSavedMoviesPage ? image :`https://api.nomoreparties.co${image}`} alt={name} className="movies-card__image" />
             </a>
             <div className="movies-card__title-like">
-                <a className="movies-card__title" href={movie.trailerLink}>
+                <a className="movies-card__title" href={movie.trailerLink} target='_blank' rel='noreferrer'>
                     {name}
                 </a>
                 <div className={`movies-card__like ${isSavedMoviesPage ? 'movies-card__like_delete' : ''} ${like ? 'movies-card__like_active' : ''}`} onClick={isSavedMoviesPage ? deleteHandler : like ? deleteHandler : likeHandler}>
