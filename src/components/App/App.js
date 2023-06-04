@@ -51,7 +51,6 @@ function App() {
           setLoggedIn(false);
         })
     }
-    console.log('z nen')
   }, [loggedIn, setCurrentUser, token]);
 
 

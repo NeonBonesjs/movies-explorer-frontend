@@ -19,7 +19,7 @@ export default function Header(props) {
                     <Link  to='/'>
                         <img src={logo} alt="логотип" className="logo"/>
                     </Link>
-                    <div className={`header__log ${loggedIn ? 'header__log_visible' : ''}`}>
+                    <div className={`header__log ${loggedIn ? '' : 'header__log_hidden'}`}>
                         <nav className={`header__navigation`}>
                             <NavLink to='/movies' className={({ isActive }) =>isActive ? 'header__link_active' : 'header__link'}>Фильмы</NavLink>
                             <NavLink to='/saved-movies' className={({ isActive }) =>isActive ? 'header__link_active' : 'header__link'}>Сохраненные фильмы</NavLink>
